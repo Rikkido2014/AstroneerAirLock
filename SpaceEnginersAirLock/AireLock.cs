@@ -20,7 +20,9 @@
             componets.lcds = GridTerminalSystem.GetBlockGroupWithName($"{arguments[0]}-lcds") as List<IMyTextPanel>;
 
             componets.lights = GridTerminalSystem.GetBlockGroupWithName($"{arguments[0]}-lights") as List<IMyInteriorLight>;
-
+            //初回起動時用処理   
+            if(componets.airLockVent.CustomData == "") componets.airLockVent.CustomData = "OUT";
+                
             float airLockOxtgenLevel = GetOxygenLevel();
             Echo($"Oxy GenLevel:{airLockOxtgenLevel}");
 
@@ -177,7 +179,7 @@
         {
             On, Off
         }
-    }
+    
     struct AirLockComponets
     {
         public IMyAirtightSlideDoor airLockDoorIn { get; set; }//Inside Door
