@@ -1,25 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using VRageMath;
-using VRage.Game;
-using VRage.Library;
-using Sandbox.ModAPI.Interfaces;
-using Sandbox.ModAPI.Ingame;
-using Sandbox.Common;
-using Sandbox.Game;
-using VRage.Collections;
-using VRage.Game.ModAPI.Ingame;
-using SpaceEngineers.Game.ModAPI.Ingame;
 
-using System.Threading.Tasks;
-
-
-namespace AstroneerAirLock
-{
-    class program : MyGridProgram
-    {
         AirLockComponets componets = new AirLockComponets();
 
         public void Main(string argument)
@@ -207,4 +186,4 @@ namespace AstroneerAirLock
         public List<IMyInteriorLight> lights { get; set; }
         public List<IMyTextPanel> lcds { get; set; }
     }
-}
+
